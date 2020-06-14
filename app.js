@@ -1,6 +1,9 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/", (request, response, next) => {
   console.log(`This is Neo. Greetings.
@@ -13,8 +16,12 @@ app.use("/spacex", (request, response, next) => {
   response.send("<h1>OMG Elon Mush!!! oops, I meant Musk. Elon <em>Musk</em>.</h1>");
 });
 
+app.use("/add-song", (request, response, next) => {
+  response.send("<form action='/song' method='POST'><input type='text' name='title' placeholder='song title here'><button type='submit'>Add</button></form>");
+})
+
 app.use("/", (request, response, next) => {
-  response.send("<h2>why would you come to the void?</h2>");
+  response.send("<h2>welcome to the void</h2>");
 });
 
 app.listen(3000);
