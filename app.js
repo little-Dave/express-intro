@@ -12,4 +12,10 @@ app.use(adminRoutes);
 
 app.use(playerRoutes);
 
+app.use("/", (request, response, next) => {
+  response.status(404).send(`<h1>Sorry,</h1>
+    <p>We couldn't find <span style="color: blue; font-family: sans-serif;">localhost:3000${request.url}</span></p>`
+    );
+});
+
 app.listen(3000);
