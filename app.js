@@ -8,8 +8,7 @@ const playerRoutes = require('./routes/player');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(adminRoutes);
-
+app.use("/admin", adminRoutes);
 app.use(playerRoutes);
 
 app.use("/", (request, response, next) => {
