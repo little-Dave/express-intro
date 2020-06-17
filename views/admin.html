@@ -6,6 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Player</li>
+          <li><a href="/add-song">Add Song</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form action="/admin/song" method="POST">
+        <input type="text" name="title">
+        <button type="submit">Add Song</button>
+      </form>
+    </main>
   </body>
 </html>
