@@ -1,0 +1,41 @@
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+.form-control input {
+  border: none;
+  border-bottom: 1px solid #9cb5ce;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #f7e060
+}
+.form-control {
+  margin: 1rem 0;
+}
+*:focus {
+  outline: none;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 200;
+  border: 1px solid #9cb5ce;
+  border-radius: .25rem;;
+  color: #9cb5ce;
+  cursor: pointer;
+}
+label {
+  color: #9cb5ce;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.song-form {
+  width: 30rem;
+  max-width: 90%;
+  margin: auto;
+}
+button:focus {
+  background-color: #f7e060;
+  border: none;
+  color: white;
+}
