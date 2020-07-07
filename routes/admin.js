@@ -6,13 +6,16 @@ const express = require('express');
 
 const router = express.Router();
 
+const songs = [];
+
 router.get("/add-song", (request, response, next) => {
   response.sendFile(path.join(rootDir, "views", "admin.html"));
 });
 
 router.post("/song", (request, response, next) => {
-  console.log(request.body);
+  songs.push({title: request.body.title});
   response.redirect("/");
 });
 
-module.exports = router;
+exports.routes = router;
+exports.songs = songs;

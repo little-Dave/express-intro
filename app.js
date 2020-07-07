@@ -6,13 +6,13 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const rootDir = require('./helpers/path');
-const adminRoutes = require('./routes/admin');
+const adminData = require('./routes/admin');
 const playerRoutes = require('./routes/player');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/admin", adminRoutes);
+app.use("/admin", adminData.routes);
 app.use(playerRoutes);
 
 app.use("/", (request, response, next) => {
