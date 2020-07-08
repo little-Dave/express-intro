@@ -7,7 +7,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get("/", (request, response, next) => {
-  response.render("player");
+  const songs = adminData.songs;
+  response.render("player", {songs: songs, docTitle: " My Player"});
   // console.log(adminData.songs);
   // response.sendFile(path.join(rootDir, "views", "player.html"))
 });
