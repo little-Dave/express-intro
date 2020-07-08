@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+app.set("view engine", "pug");
+
 const rootDir = require('./helpers/path');
 const adminData = require('./routes/admin');
 const playerRoutes = require('./routes/player');
